@@ -1,0 +1,293 @@
+.hero {
+	font-size: 3.5vw;
+	line-height: 1;
+	color: #fff;
+	/* Bright things in dark environments usually cast that light, giving off a glow */
+	filter: drop-shadow(0 0 0.5vw);
+}
+ 
+    .layers {
+    position: relative;
+    }
+    
+   .movement {
+    /* Normally this position would be absolute & on the layers, set to relative here so we can see it on the div */
+    position: relative;
+    animation: movement 8s step-end infinite;
+    }
+    
+    @keyframes movement {
+    0% {
+      top: 0px;
+      left: -20px;
+    }
+    
+    15% {
+      top: 10px;
+      left: 10px;
+    }
+    
+    60% {
+      top: 5px;
+      left: -10px;
+    }
+    
+    75% {
+      top: -5px;
+      left: 20px;
+    }
+    
+    100% {
+      top: 10px;
+      left: 5px;
+    }
+    }
+    
+    .opacity {
+    animation: opacity 5s step-end infinite;
+    }
+    
+    @keyframes opacity {
+    0% {
+      opacity: 0.1;
+    }
+    
+    5% {
+      opacity: 0.7;
+    }
+    
+    30% {
+      opacity: 0.4;
+    }
+    
+    45% {
+      opacity: 0.6;
+    }
+    
+    76% {
+      opacity: 0.4;
+    }
+    
+    90% {
+      opacity: 0.8;
+    }
+    
+    1%,
+    7%,
+    33%,
+    47%,
+    78%,
+    93% {
+      opacity: 0;
+    }
+    }
+    
+    .font {
+    animation: font 7s step-end infinite;
+    }
+    
+    @keyframes font {
+    0% {
+      font-weight: 100;
+      color: #e0287d;
+      filter: blur(3px);
+    }
+    
+    20% {
+      font-weight: 500;
+      color: #fff;
+      filter: blur(0);
+    }
+    
+    50% {
+      font-weight: 300;
+      color: #1bc7fb;
+      filter: blur(2px);
+    }
+    
+    60% {
+      font-weight: 700;
+      color: #fff;
+      filter: blur(0);
+    }
+    
+    90% {
+      font-weight: 500;
+      color: #e0287d;
+      filter: blur(6px);
+    }
+    }
+    
+    .glitch span {
+    animation: paths 5s step-end infinite;
+    }
+    
+    .glitch::before {
+    animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+      font 8s step-end infinite, movement 10s step-end infinite;
+    }
+    
+    .glitch::after {
+    animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+      font 7s step-end infinite, movement 8s step-end infinite;
+    }
+    
+    .hero-container {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      position: relative;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 125px;
+    }
+    
+    .previous {
+     height: 100%;
+      width: 250px;
+      justify-content: space-between;
+      color: #fff;
+      font-size: 20px;
+      align-items: center;
+      display: flex;
+      position: relative;
+      text-align: right;
+    } 
+
+    .clickable:hover {
+      background-color: #777777;
+    }
+    
+    .non-clickable {
+      color: #9b9b9b;
+    }
+
+    a {
+      text-decoration: none;
+    width: 100%;
+    color: #fff;
+  }
+
+  .checkbox {
+    height: 20px;
+  }
+    
+    body::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+      linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+      );
+    z-index: -2;
+    background-size: 100% 10px, 10px 100%;
+    pointer-events: none;
+    height: 100%;
+    }
+    
+    body {
+      margin-top: 50px;
+      margin-left: 10%;
+      margin-right: 10%;
+      background: rgb(0,0,0);
+      background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(20,20,20,1) 50%, rgba(0,0,0,1) 100%);
+      font-family: "VCR", monospace;
+      animation: textShadow 1.6s infinite;
+    }
+  
+    ::selection {
+    background: #777777;
+    color: #0f0f0f;
+    text-shadow: none;
+    }
+  
+    @font-face {
+      font-family: 'VCR';
+      src: url('VCR.eot'); /* IE9 Compat Modes */
+      src: url('VCR.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url('VCR.woff') format('woff'), /* Modern Browsers */
+           url('VCR.ttf')  format('truetype'), /* Safari, Android, iOS */
+           url('VCR.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+
+    
+    input[type=checkbox] {
+        margin-right: 0;
+    }
+    
+    .container {
+        background-color: #23235B;
+        box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        width: 350px;
+        max-width: 100%;
+    }
+    
+    .result-container {
+        border: 3px solid #777777;
+        background-color: #414141;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        margin: auto;
+        font-size: 18px;
+        letter-spacing: 1px;
+        height: 55px;
+        width: 75%;
+        margin-bottom: 2.5vw;
+    }
+    
+    .result-container #result {
+        word-wrap: break-word;
+        max-width: calc(100% - 40px);
+        color: #fff;
+        font-size: 2.5vw;
+    }
+    
+    .result-container .btn {
+        font-size: 20px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 45px;
+        width: 45px;
+    }
+    
+    .btn {
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 8px 12px;
+        background-color: #777777;
+    }
+    
+    .btn-large {
+        font-size: 25px;
+        position: relative;
+        margin: auto;
+        display: block;
+        height: 50px;
+        width: 250px;
+    }
+    
+    .setting {
+        font-size: 25px;
+        color: #fff;
+        padding-bottom: 15px;
+        position: relative;
+        margin: auto;
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }

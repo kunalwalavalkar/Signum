@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SIGNUM | Generate Password</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="generate.css" />
+    </head>
+    <body>
+        <div class="hero-container">
+            <h2 class="hero glitch layers" data-text="SIGNUM"><div>SIGNUM</div></h2>
+            <div class="previous">
+              <h2>
+                <a class="clickable" href="index.html">TEST</a>
+              </h2>
+              
+              <h2>
+                  <a class="non-clickable">GENERATE</a>
+              </h2>
+            </div>
+          </div>
+          <div class="result-container">
+            <span id="result"></span>
+            <button class="btn" id="clipboard">
+                <i class="far fa-clipboard"></i>
+            </button>
+        </div>
+        <div class="settings">
+            <div class="setting">
+                <label>PASSWORD LENGTH</label>
+                <input type="number" id="length" min='4' max='20' value='20' />
+            </div>
+            <div class="setting">
+                <label>UPPERCASE LETTERS</label> 
+                <input type="checkbox" class="checkbox" id="uppercase" checked />
+            </div>
+            <div class="setting">
+                <label>LOWERCASE LETTERS</label> 
+                <input type="checkbox" class="checkbox" id="lowercase" checked />
+            </div>
+            <div class="setting">
+                <label>NUMBERS</label> 
+                <input type="checkbox" class="checkbox" id="numbers" checked />
+            </div>
+            <div class="setting">
+                <label>SYMBOLS</label> 
+                <input type="checkbox" class="checkbox" id="symbols" checked />
+            </div>
+        </div>
+        <button class="btn btn-large" id="generate">
+            Generate password
+        </button>
+        <script src="generate.js"></script>
+    </body>
+</html>
