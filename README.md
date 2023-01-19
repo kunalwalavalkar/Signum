@@ -1,5 +1,4 @@
 # SIGNUM
-## Features
   - Create password
   - Test the password strength
 
